@@ -22,7 +22,20 @@ body {
   width: 30vw;
   margin: auto;
 }
+#container {
+  width: 300px;
+  height: 75px;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px #000;
+  margin: 1px auto;
+  border: 1px solid #ffffff40;
+}
 
+.filter {
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  background-color: rgba(243, 243, 243, 0.2);
+}
 .box {
   padding: 10px;
   margin: 0 10px 0 10px;
