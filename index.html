@@ -17,14 +17,10 @@
     <link rel="stylesheet" href="./css/button.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="header__container container">
-        <img src="./assets/imagenes/Logo.svg" alt="Logo" class="logo" />
-      </div>
-    </header>
     <main class="main">
       <div class="card">
         <div class="card__containter container">
+          <img src="./assets/imagenes/Logo.svg" alt="Logo" class="logo" />
           <section class="encryptor">
             <textarea
               name=""
@@ -32,6 +28,7 @@
               cols="30"
               rows="10"
               placeholder="Ingrese Texto aqui"
+              data-text-area
             ></textarea>
             <div class="warning">
               <div class="warning__icon"></div>
@@ -39,30 +36,40 @@
                 >Solo letras minúsculas y sin acentos</span
               >
             </div>
+            <div class="buttons">
+              <button class="btn btn--blue" data-btn-="encryptor">
+                Encriptar
+              </button>
+              <button class="btn btn--gray" data-btn-="dencryptor">
+                Desencriptar
+              </button>
+            </div>
           </section>
-          <div class="buttons">
-            <button class="btn btn--blue">Encriptar</button>
-            <button class="btn btn--gray">Desencriptar</button>
-          </div>
           <section class="encryptor-value">
-            <div class="message">
-              <h3 class="message__tittle">Ningún mensaje fue encontrado</h3>
-              <p class="message__paragraph">
+            <div class="value-copy value-copy--message" data-hidden-message>
+              <div class="value-copy__img"></div>
+              <h3 class="value-copy__tittle">Ningún mensaje fue encontrado</h3>
+              <p class="value-copy__paragraph value-copy__paragraph--message">
                 Ingresa el texto que desees encriptar o desencriptar.
               </p>
             </div>
-            <div class="value-copy">
-              <p class="value-copy__paragraph">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Pariatur unde alias quam quisquam earum, quia accusantium
-                placeat neque molestias provident minima tenetur sunt eos,
-                suscipit at nesciunt, architecto cum voluptate!
-              </p>
-              <button class="btn btn--gray btn--copy">Copiar</button>
+            <div
+              class="value-copy value-copy--copy value-copy--hidden"
+              data-hidden-copy
+            >
+              <div class="overflow">
+                <p
+                  class="value-copy__paragraph value-copy__paragraph--copy"
+                ></p>
+              </div>
+              <button class="btn btn--gray btn--copy" data-btn-="copy">
+                Copiar
+              </button>
             </div>
           </section>
         </div>
       </div>
     </main>
+    <script src="./js/hidden.js"></script>
   </body>
 </html>

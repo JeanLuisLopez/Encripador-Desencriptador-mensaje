@@ -9,11 +9,15 @@
   background: #e5e5e5;
   color: #0a3871;
   font-size: 2rem;
+  resize: none;
 }
 .text-area--encryptor::placeholder {
   font-family: var(--font1);
   opacity: 1;
 }
-.encryptor-value {
-  margin-top: 64px;
+@media screen and (min-width: 1280px) {
+  .text-area--encryptor {
+    max-height: 288px;
+    margin-bottom: 0;
+  }
 }

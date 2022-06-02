@@ -1,64 +1,156 @@
 :root {
   --font1: "Inter", sans-serif;
 }
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html,
+body,
+main {
+  height: 100%;
+}
+
+body {
+  padding: 20px 0;
+}
 html {
   background: #e5e5e5;
 }
 .card {
-  margin: 56px 0 40px 0;
+  margin-bottom: 24px;
   font-family: var(--font1);
   font-weight: 400;
+}
+.encryptor {
+  margin-top: 56px;
 }
 .container {
   width: 90%;
   margin: 0 auto;
 }
-.header__container {
+.logo {
   padding: 24px 0;
 }
 .warning {
   display: flex;
-  margin-top: 56px;
   gap: 5px;
+  margin-top: 56px;
   align-items: center;
 }
 .warning__icon {
   display: block;
-  background: url("../assets/imagenes/bi_exclamation-circle-fill.svg");
   width: 16px;
   height: 16px;
+  background: url("../assets/imagenes/bi_exclamation-circle-fill.svg");
 }
 .warning__text {
   font-size: 12px;
 }
 .encryptor-value {
+  margin-top: 64px;
   color: #495057;
 }
-.message {
-  display: block;
-  width: 263px;
+
+.value-copy {
   padding: 32px;
-  text-align: center;
   background: #fff;
+  text-align: center;
   border-radius: 32px;
   box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
 }
+.overflow {
+  height: 288px;
+  margin-top: 80px;
+  overflow-y: scroll;
+}
 
-.message__tittle {
+.value-copy__tittle {
   font-size: 24px;
   color: #343a40;
   font-weight: 700;
   line-height: 1.2;
 }
-.message__paragraph {
-  font-size: 1rem;
-  line-height: 1.5;
+.value-copy__paragraph {
   margin-top: 16px;
+  line-height: 1.5;
+}
+.value-copy__paragraph--message {
+  font-size: 1rem;
 }
 
-.value-copy {
-  display: none;
-}
-.value-copy__paragraph {
+.value-copy__paragraph--copy {
+  text-align: left;
   font-size: 24px;
+}
+.value-copy__img {
+  display: block;
+  width: 100%;
+  max-width: 336px;
+  height: 100%;
+  max-height: 304px;
+  background: url("../assets/imagenes/Muñeco.png") center / cover no-repeat;
+}
+.value-copy--hidden {
+  display: none !important;
+}
+
+@media screen and (min-width: 1280px) {
+  .logo {
+    position: absolute;
+    padding: 0;
+  }
+  .card {
+    height: 100%;
+    margin: 0;
+  }
+  .card__containter {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 80px;
+    height: 100%;
+  }
+  .encryptor {
+    display: flex;
+    flex-direction: column;
+    height: 75%;
+    margin-left: 112px;
+    margin-top: 112px;
+  }
+  .encryptor-value {
+    align-self: start;
+    grid-column: 2/3;
+    height: 100%;
+    margin: 0;
+  }
+  .value-copy {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+  }
+  .value-copy--message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .warning {
+    margin-top: auto;
+  }
+}
+@media screen and (min-width: 1440px) {
+  body {
+    padding: 40px 0;
+  }
+  .encryptor {
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    margin-left: 112px;
+    margin-top: 112px;
+  }
 }
