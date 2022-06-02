@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador y Desencriptador</title>
-    \
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,13 +13,56 @@
     />
     <link rel="stylesheet" href="./css/base/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/textarea.css" />
+    <link rel="stylesheet" href="./css/button.css" />
   </head>
   <body>
     <header class="header">
       <div class="header__container container">
-        <img src="./assets/imagenes/Logo.png" alt="Logo" class="logo" />
+        <img src="./assets/imagenes/Logo.svg" alt="Logo" class="logo" />
       </div>
     </header>
-    <main class="main"></main>
+    <main class="main">
+      <div class="card">
+        <div class="card__containter container">
+          <section class="encryptor">
+            <textarea
+              name=""
+              class="text-area text-area--encryptor"
+              cols="30"
+              rows="10"
+              placeholder="Ingrese Texto aqui"
+            ></textarea>
+            <div class="warning">
+              <div class="warning__icon"></div>
+              <span class="warning__text"
+                >Solo letras minúsculas y sin acentos</span
+              >
+            </div>
+          </section>
+          <div class="buttons">
+            <button class="btn btn--blue">Encriptar</button>
+            <button class="btn btn--gray">Desencriptar</button>
+          </div>
+          <section class="encryptor-value">
+            <div class="message">
+              <h3 class="message__tittle">Ningún mensaje fue encontrado</h3>
+              <p class="message__paragraph">
+                Ingresa el texto que desees encriptar o desencriptar.
+              </p>
+            </div>
+            <div class="value-copy">
+              <p class="value-copy__paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur unde alias quam quisquam earum, quia accusantium
+                placeat neque molestias provident minima tenetur sunt eos,
+                suscipit at nesciunt, architecto cum voluptate!
+              </p>
+              <button class="btn btn--gray btn--copy">Copiar</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
