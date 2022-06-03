@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador y Desencriptador</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/imagenes/logoJ.png"
+      type="image/x-icon"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,7 +25,7 @@
     <main class="main">
       <div class="card">
         <div class="card__containter container">
-          <img src="./assets/imagenes/Logo.svg" alt="Logo" class="logo" />
+          <img src="./assets/imagenes/logoJ.png" alt="Logo" class="logo" />
           <section class="encryptor">
             <textarea
               name=""
@@ -32,9 +37,7 @@
             ></textarea>
             <div class="warning">
               <div class="warning__icon"></div>
-              <span class="warning__text"
-                >Solo letras minúsculas y sin acentos</span
-              >
+              <span class="warning__text">Solo letras sin acentos</span>
             </div>
             <div class="buttons">
               <button class="btn btn--blue" data-btn-="encryptor">
@@ -60,6 +63,7 @@
               <div class="overflow">
                 <p
                   class="value-copy__paragraph value-copy__paragraph--copy"
+                  data-value-copy
                 ></p>
               </div>
               <button class="btn btn--gray btn--copy" data-btn-="copy">
@@ -70,6 +74,7 @@
         </div>
       </div>
     </main>
-    <script src="./js/hidden.js"></script>
+    <script src="./js/botonAction.js" type="module"></script>
+    <script src="./js/copytext.js"></script>
   </body>
 </html>
